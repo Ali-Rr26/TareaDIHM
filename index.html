@@ -12,16 +12,11 @@
 </head>
 <body>
   <script>
-    const glb  = 'https://yan2005dris-afk.github.io/blender-ar/robot.glb';
-    const usdz = 'https://yan2005dris-afk.github.io/blender-ar/robot.usdz';
-
-    const isIOS     = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const glb  = 'https://github.com/Ali-Rr26/TareaDIHM.git/proyRobot.glb';
+   
     const isAndroid = /Android/.test(navigator.userAgent);
 
-    if (isIOS) {
-      // Quick Look (iOS)
-      location.href = usdz + '#allowsContentScaling=0';
-    } else if (isAndroid) {
+   if (isAndroid) {
       // Scene Viewer (Android)
       const intent = intent://arvr.google.com/scene-viewer/1.0?file=${encodeURIComponent(glb)}#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=${encodeURIComponent(location.href)};end;;
       location.href = intent;
