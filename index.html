@@ -4,13 +4,40 @@
   <meta charset="utf-8">
   <title>Robot AR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Librería oficial de Model Viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <style>
-    body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    model-viewer { width: 100%; height: 100%; }
+    body {
+      margin: 0;
+      background-color: #88a7d0; /* Fondo claro */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: #88a7d0; /* Mismo color de fondo dentro del visor */
+    }
   </style>
 </head>
 <body>
-  <model-viewer src="proyRobot.glb" alt="Robot 3D" auto-rotate camera-controls ar></model-viewer>
+
+  <!-- Visor 3D con modo AR -->
+  <model-viewer
+    src="proyRobot.glb"
+    alt="Robot 3D"
+    auto-rotate
+    camera-controls
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    environment-image="neutral"
+    shadow-intensity="1">
+  </model-viewer>
+
 </body>
 </html>
