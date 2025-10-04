@@ -11,20 +11,6 @@
   </style>
 </head>
 <body>
-  <script>
-    const glb  = 'proyRobot.glb';   
-    const isAndroid = /Android/.test(navigator.userAgent);
-
-   if (isAndroid) {
-      // Scene Viewer (Android)
-      const intent = intent://arvr.google.com/scene-viewer/1.0?file=${encodeURIComponent(glb)}#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=${encodeURIComponent(location.href)};end;;
-      location.href = intent;
-    } else {
-  // PC → mostramos visor 3D en esta misma página
-  document.body.innerHTML = `
-    <model-viewer src="${glb}" 
-                  alt="Robot 3D"
-                  auto-rotate 
-                  camera-controls 
-                  ar 
-                  ar-modes="s
+  <model-viewer src="proyRobot.glb" alt="Robot 3D" auto-rotate camera-controls ar></model-viewer>
+</body>
+</html>
