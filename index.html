@@ -8,13 +8,13 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
   <style>
-    body {
+    html, body {
       margin: 0;
-      background-color: #88a7d0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #88a7d0; /* Fondo celeste */
     }
 
     model-viewer {
@@ -26,7 +26,6 @@
 </head>
 <body>
 
-  <!-- Modelo 3D visible desde el inicio -->
   <model-viewer
     src="proyRobot.glb"
     alt="Robot 3D"
@@ -37,11 +36,9 @@
     shadow-intensity="1"
     exposure="1"
     environment-image="neutral"
-    skybox-image="none"
     scale="0.5 0.5 0.5"
     rotation="0 180 0"
-    camera-orbit="0deg 75deg 2.5m"
-    field-of-view="30deg"
+    camera-orbit="0deg 75deg auto"
     style="background-color: #88a7d0;">
   </model-viewer>
 
